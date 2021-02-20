@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Schoom: Get studying fast</title>
+        <link rel="icon" href="{% static 'images/logo.png' %}" type="image/icon type">
+
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="nav">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'images/logo.png' %}" class="logo">
+            </a>
+            <div>
+                <h1>Schoom</h1>
+                <p>Get studying fast</p>
+            </div>
+            <div class="spacer"></div>
+        </div>
+
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>
