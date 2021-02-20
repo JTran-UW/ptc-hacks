@@ -22,12 +22,20 @@ p {
 
 .nav {
     background-color: orange;
-    padding: 20px;
+    padding: 10px 20px;
     box-shadow: 0px 2px 5px 1px #bbb;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     font-family: Microsoft Jhenghei UI;
+}
+
+.logo {
+    height: 65px;
+}
+
+.spacer {
+    width: 100px;
 }
 
 .content {
