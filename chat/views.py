@@ -1,12 +1,11 @@
-
-from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
-#def chat_view(request, *args, **kwargs):
-	#return render(request, "math.html", {})
+def chat_view(request, *args, **kwargs):
+	print(request.path)
+	return render(request, "chat/math.html", {})
 
-from django.shortcuts import render
+
 
 # Create your views here.
 
