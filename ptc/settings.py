@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'chat',
+    'channels'
 ]
 
 MIDDLEWARE = [
@@ -126,6 +127,7 @@ STATICFILES_DIRS = [
     BASE_DIR.joinpath("static")
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
+ASGI_APPLICATION = "ptc.asgi.application"
 
 # Activate Django-Heroku
 django_heroku.settings(locals())

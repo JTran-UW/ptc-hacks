@@ -26,4 +26,5 @@ urlpatterns = [
     path('', home, name="home"),
     path('chat/', views.chat_view),
     path('chat/<str:subject>', views.chat_view),
+    path('chat/<str:subject>/<str:code>', views.chat_view)
 ]

@@ -3,17 +3,30 @@
 
 {% block styles %}
     <link rel="stylesheet" href="{% static 'css/chat.css' %}">
-    <script type="text/javascript" src="{% static 'js/wait.js' %}"></script>
+    <script type="text/javascript">
+        const chatSocket = new WebSocket(
+            "ws://"
+            + window.location.host
+            + "/ws/chat/"
+            + "{{ subject }}"
+            + "/"
+        );
+        
+        chatSocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            document.getElementById("message").value = "Partner found!";
+            window.location = window.location.href + "/" + data.message;
+        }
+        
+        chatSocket.onclose = function(e) {
+            console.error("Chat socket closed unexpectedly");
+        }
+    </script>
 {% endblock %}
 
 {% block content %}
     <div class="loading">
         <img src="{% static 'images/loading.gif' %}">
-        <h1>Looking for study partner...</h1>
-
-        <form action="/chat/{{ subject }}" method="POST" id="check">
-            {% csrf_token %}
-            <input type="submit">
-        </form>
+        <h1 id="message">Looking for study partner...</h1>
     </div>
 {% endblock %}
