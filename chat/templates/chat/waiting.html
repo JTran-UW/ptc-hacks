@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+    <script type="text/javascript" src="{% static 'js/wait.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="loading">
+        <img src="{% static 'images/loading.gif' %}">
+        <h1>Looking for study partner...</h1>
+
+        <form action="/chat/{{ subject }}" method="POST" id="check">
+            {% csrf_token %}
+            <input type="submit">
+        </form>
+    </div>
+{% endblock %}
