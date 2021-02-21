@@ -18,7 +18,12 @@ from django.urls import path
 
 from .views import home
 
+from chat import views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name="home")
+    path('', home, name="home"),
+    path('chat/', views.chat_view),
+
 ]
