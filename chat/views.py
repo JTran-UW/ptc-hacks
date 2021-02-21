@@ -30,6 +30,7 @@ def chat_view(request, *args, **kwargs):
 			code = room_code()
 		i += 1
 
+		print(users)
 		if len(users) > 1:
 			return render(request, "chat/chat.html", {"subject": s.capitalize(), "room_code": code})
 		else:
