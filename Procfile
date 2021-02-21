@@ -1,1 +1,1 @@
-web: gunicorn ptc.wsgi
+web: daphne ptc.asgi:application --port $PORT --bind 0.0.0.0
