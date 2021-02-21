@@ -7,9 +7,9 @@
 {% endblock %}
 
 {% block content %} 
-    <p class="label">You are studying: Mathematics</p>
+    <p class="label">You are studying: {{ subject }}</p>
 
-    <iframe allow="camera; microphone; fullscreen; display-capture" src="https://meet.jit.si/ptc-test-meeting" class="video"></iframe>
+    <iframe allow="camera; microphone; fullscreen; display-capture" src="https://meet.jit.si/{{ room_code }}" class="video"></iframe>
     <div class="board-bar" id="board-bar">
         <p>Whiteboard</p>
         <img src="{% static 'images/up.png' %}" id="arrow">
