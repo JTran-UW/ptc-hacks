@@ -26,10 +26,9 @@ def chat_view(request, *args, **kwargs):
 
 	s = subject(request.path)
 	if request.method == "POST":
-		#if i % 2 == 0:
-		#	code = room_code()
-		#i += 1
-		code = "our-test-room"
+		if i % 2 == 0:
+			code = room_code()
+		i += 1
 
 		if len(users) > 1:
 			return render(request, "chat/chat.html", {"subject": s.capitalize(), "room_code": code})
