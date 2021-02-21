@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <p class="label">Subjects</p>
+
+    <div class="grid">
+        <a class="card" href="">
+            <img class="img" src="{% static 'images/math.jpg' %}">
+            <p class="name">Mathematics</p>
+            <p>Related subjects:</p>
+            <p class="related">Arithematic, algebra, geometry, precalculus, calculus, linear algebra</p>
+        </a>
+        <a class="card" href="study/english.html">
+            <img class="img" src="{% static 'images/english.jpeg' %}">
+            <p class="name">English</p>
+            <p>Related subjects:</p>
+            <p class="related">Literature, multicultural literature, writing, creative writing</p>
+        </a>
+        <a class="card" href="study/chem.html">
+            <img class="img" src="{% static 'images/chem.jpg' %}">
+            <p class="name">Chemistry</p>
+            <p>Related subjects:</p>
+            <p class="related">Organic chemistry, physical chemistry, polymer chemistry, analytical chemistry, biochemistry</p>
+        </a>
+        <a class="card">
+            <img class="img" src="{% static 'images/physics.jpg' %}">
+            <p class="name">Physics</p>
+            <p>Related subjects:</p>
+            <p class="related">Classical mechanics, thermodynamics, electromagnetism, quantum physics</p>
+        </a>
+        <a class="card">
+            <img class="img" src="{% static 'images/lang.jpg' %}">
+            <p class="name">Foreign Language</p>
+            <p>Related subjects:</p>
+            <p class="related">French, Chinese, Japanese, Spanish, German, Vietnamese</p>
+        </a>
+        <a class="card">
+            <img class="img" src="{% static 'images/orch.jpg' %}">
+            <p class="name">Music</p>
+            <p>Related subjects:</p>
+            <p class="related">Orchestra, band, jazz band, ensemble, marching band, solo, music production</p>
+        </a>
+    </div>
+{% endblock %}

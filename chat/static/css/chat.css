@@ -1,0 +1,32 @@
+.video {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    border: 0px;
+    display: block;
+    margin: 0px auto;
+}
+
+.board-bar {
+    height: 30px;
+    width: 100%;
+    max-width: 800px;
+    cursor: pointer;
+    border: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+}
+
+.board-bar img {
+    height: 50%;
+}
+
+.board-bar * {
+    margin: 10px;
+}
+
+.invisible {
+    height: 0px;
+}
